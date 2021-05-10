@@ -18,6 +18,28 @@
   border-top: 4px solid transparent;
 }
 
+.img{
+    margin:10px auto;
+    height:180px;
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    }
+  .img img{
+    width: 180px;
+  }
+  @media all and (min-width: 500px) and (max-width: 1000px)
+  {  
+  .img{
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    }
+  }
+  .img img{
+     width:100%;
+  }
 
 .clip {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
