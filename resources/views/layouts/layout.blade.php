@@ -20,6 +20,7 @@
     <!-- Styles -->
 
     <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 </head>
 
@@ -34,5 +35,8 @@
     </div>
     <script src="{{asset('js/vue.js')}}"></script>
 </body>
+
+<script src="{{asset('js/app.js')}}"></script>
 <script src="{{asset('js/carousel.js')}}"></script>
+
 </html>

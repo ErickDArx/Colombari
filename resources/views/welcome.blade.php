@@ -1,7 +1,7 @@
 @extends('layouts/layout')
 
 @section('Acceso')
-{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
     <a class="navbar-brand" href="#">
         <img src="{{asset('img/Logo.png')}}" width="30" height="30" alt="">
     </a>
@@ -17,7 +17,7 @@
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </div>
     </div>
-</nav> --}}
+</nav>
 @endsection
 
 @section('Portada')
