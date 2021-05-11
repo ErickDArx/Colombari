@@ -1,76 +1,36 @@
 @extends('layouts/layout')
 
 @section('Acceso')
-<nav class="navbar nav shadow borde-abajo borde-top">
-    <div class="container">
-        <h1 class="" style="font-size: 1.3rem">Venta de mascarillas</h1>
-        <div class="input-group mb-3 col-6 mt-2">
-            <input type="text" class="form-control" placeholder="">
-            <div class="input-group-append">
-                <button class="btn btn-dark" type="button">Buscar</button>
-            </div>
+{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+    <a class="navbar-brand" href="#">
+        <img src="{{asset('img/Logo.png')}}" width="30" height="30" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </div>
     </div>
-
-</nav>
+</nav> --}}
 @endsection
 
 @section('Portada')
-
-<div class="container mt-2">
-    <h2 style="font-size: 1.1rem">Productos disponibles</h2>
-
-    {{-- <div class="form-group">
-            <form action="{{route('AgregarMascarilla')}}" method="POST" enctype="multipart/form-data">
-    @csrf
-    <label for="">Nombre de la mascarilla</label>
-    <input type="text">
-    <label for="">Categoria</label>
-    <input type="text">
-    <label for="">Precio</label>
-    <input type="text">
-    <label for="">Imagen</label>
-    <input type="file" name="imagen">
-    <button type="submit">Aceptar</button>
-    </form>
-
-</div> --}}
-
-<div class="row">
-    @foreach ($mascarillas as $item)
-    <div class="d-flex">
-        <div class="card m-2" style="">
-            <div class="text-center">
-                <img class="m-0 border-0 rounded-top img" src="{{asset($item->img)}}" alt="">
-            </div>
-            <div class="card-body">
-                <h2 class="card-title border-bottom">Card title</h2>
-                <div class="">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            Categoria
-                        </div>
-                        <div class="col-sm-6">
-                            Precio
-                        </div>
-                        <div class="col-sm-6">
-                            Cantidad
-                        </div>
-                    </div>
-                </div>
-                    <div class="text-center ">
-                        <div class="d-flex">
-                    <a href="#" class="mr-2 btn btn-primary">! Lo quiero ¡</a>
-                    <a href="#" class=" btn btn-outline-primary">Guardar en mis favoritos</a>  
-                        </div>
-  
-                    </div>
-        
-                </div>
-        </div>
+<div class="gallery">
+    <div class="gallery-container">
+      <img class="gallery-item gallery-item-1" src="https://www.disok.com/8517-large_default/lote-50-mascarillas-higienicas-infantiles-algodon-cartoon.jpg" data-index="1">
+      <img class="gallery-item gallery-item-2" src="http://fakeimg.pl/300/?text=2" data-index="2">
+      <img class="gallery-item gallery-item-3" src="http://fakeimg.pl/300/?text=3" data-index="3">
+      <img class="gallery-item gallery-item-4" src="http://fakeimg.pl/300/?text=4" data-index="4">
+      <img class="gallery-item gallery-item-5" src="http://fakeimg.pl/300/?text=5" data-index="5">
     </div>
+    <div class="gallery-controls"></div>
+  </div>
 
-    @endforeach
-</div>
 
 @endsection
