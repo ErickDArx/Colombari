@@ -7,6 +7,62 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+ .logo{
+   width: 2.8rem;
+   height: 2.8rem;
+ }
+
+.imagen{
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.imagen img{
+  width: 100%;
+}
+
+.imagen:before{
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.reaccion{
+  background: #51C4D3;
+}
+
+.reaccion i{
+  font-size: 3rem;
+  color: #fff;
+}
+
+.oscurecer{
+  background: url('./background.jpg');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.oscurecer::before{
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.459);
+}
+
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;

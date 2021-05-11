@@ -3,7 +3,7 @@
 @section('Acceso')
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
     <a class="navbar-brand" href="#">
-        <img src="{{asset('img/Logo.png')}}" width="30" height="30" alt="">
+        <img class="logo" src="{{asset('img/LogoSEO.png')}}" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,19 +18,40 @@
         </div>
     </div>
 </nav>
+
+<form action="{{route('AgregarMascarilla')}}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <label for="">Imagen</label>
+    <input name="imagen" type="file">
+    <button type="submit">Aceptar</button>
+</form>
+
 @endsection
 
 @section('Portada')
-<div class="gallery container">
-    <div class="gallery-container">
-      <img class="gallery-item gallery-item-1" src="https://www.disok.com/8517-large_default/lote-50-mascarillas-higienicas-infantiles-algodon-cartoon.jpg" data-index="1">
-      <img class="gallery-item gallery-item-2" src="http://fakeimg.pl/300/?text=2" data-index="2">
-      <img class="gallery-item gallery-item-3" src="http://fakeimg.pl/300/?text=3" data-index="3">
-      <img class="gallery-item gallery-item-4" src="http://fakeimg.pl/300/?text=4" data-index="4">
-      <img class="gallery-item gallery-item-5" src="http://fakeimg.pl/300/?text=5" data-index="5">
+<!-- Flickity HTML init -->
+<div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+    @foreach ($mascarillas as $item)
+    <div class="gallery-cell imagen img">
+
+        <div class="m-0 row card-body position-relative">
+            <img class="" src="{{asset($item->img)}}" alt="">
+            <div class="col-sm-10 p-0 oscurecer">
+                <div class="container-fluid mt-2 mb-2">
+                    <h2 class=" font-weight-bold">Mascarilla desechable rosa para adulto</h2>
+                    <button class="position-relative btn btn-primary rounded">
+                        ¡Lo quiero!
+                    </button>
+                </div>
+
+            </div>
+            <div class=" col-sm-2 m-0 p-0 d-flex reaccion justify-content-center  align-items-center">
+                <i class="corazon m-0 p-0 far fa-heart"></i>
+            </div>
+
+        </div>
     </div>
-    <div class="gallery-controls"></div>
-  </div>
 
-
+    @endforeach
+</div>
 @endsection
