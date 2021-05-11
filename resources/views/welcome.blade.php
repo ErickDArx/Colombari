@@ -21,7 +21,7 @@
 @endsection
 
 @section('Portada')
-<div class="gallery">
+<div class="gallery container">
     <div class="gallery-container">
       <img class="gallery-item gallery-item-1" src="https://www.disok.com/8517-large_default/lote-50-mascarillas-higienicas-infantiles-algodon-cartoon.jpg" data-index="1">
       <img class="gallery-item gallery-item-2" src="http://fakeimg.pl/300/?text=2" data-index="2">
