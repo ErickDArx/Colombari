@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\mascarillas;
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Storage;
+
 class MascarillasController extends Controller
 {
     public function index(Request $request){
@@ -20,18 +22,9 @@ class MascarillasController extends Controller
     }
 
     public function store(Request $request){
-        if($request->hasFile('imagen')){
 
-        }
         $mascarillas = new mascarillas();
-        $mascarillas->nombre = "Ejemplo";
-        $mascarillas->categoria = 1;
-        $mascarillas->cantidad = 10;
-        $mascarillas->precio = "5000";
-        $imagenes =  $request->file('imagen')->store('public');
-        $url = Storage::url($imagenes);
-        $mascarillas->img = $url;
-        $mascarillas->save();
-        return back();
+        mascarillas::setImagen($request->imagen);
+        dd($mascarillas);
     }
 }
