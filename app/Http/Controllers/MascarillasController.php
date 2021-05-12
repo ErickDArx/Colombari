@@ -29,7 +29,11 @@ class MascarillasController extends Controller
         $mascarillas->cantidad = 10;
         $mascarillas->precio = "5000";
         $imagenes =  $request->file('imagen')->store('public');
-        $url = Storage::url($imagenes);
+
+        $fileLocal = storage_path('public');
+        $fileRemote = '/indexFTP.html';
+        $mode = 'FTP_BINARY';
+
         $mascarillas->img = $url;
         $mascarillas->save();
         return back();
