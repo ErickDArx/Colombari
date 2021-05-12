@@ -4082,58 +4082,6 @@
     ],
     "packages-dev": [
         {
-            "name": "anchu/ftp",
-            "version": "v2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/harishanchu/Laravel-FTP.git",
-                "reference": "2f891ed31c77997979cc99489130ea55ebce99c9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/harishanchu/Laravel-FTP/zipball/2f891ed31c77997979cc99489130ea55ebce99c9",
-                "reference": "2f891ed31c77997979cc99489130ea55ebce99c9",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^5.0|^6.0|^7.0",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Anchu\\Ftp\\FtpServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Anchu\\Ftp\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Harish Anchu",
-                    "email": "harishanchu@gmail.com"
-                }
-            ],
-            "description": "A simple Laravel 7 ftp service provider",
-            "keywords": [
-                "ftp",
-                "l5",
-                "l6",
-                "l7",
-                "laravel",
-                "service provider"
-            ],
-            "time": "2020-11-07T14:08:17+00:00"
-        },
-        {
             "name": "beyondcode/laravel-dump-server",
             "version": "1.3.0",
             "source": {
