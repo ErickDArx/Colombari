@@ -91,6 +91,12 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn'=>'mongodb+srv://colombari:colombari_21@cluster0.yra3o.mongodb.net/colombari?retryWrites=true&w=majority',
+            'database' => 'estudiantes',
+        ],
+
     ],
 
     /*
@@ -123,7 +129,7 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
+            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_database_'),
         ],
 
         'default' => [
