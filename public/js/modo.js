@@ -14,3 +14,10 @@ if (localStorage.theme === 'dark' || (!'theme' in localStorage && window.matchMe
 } else if (localStorage.theme === 'dark') {
     document.querySelector('html').classList.add('dark')
 }
+
+const boton = document.querySelector('#boton');
+const menu = document.querySelector('#menu');
+boton.addEventListener('click',()=> {
+    menu.classList.toggle('hidden')
+})
+

@@ -6,7 +6,10 @@ module.exports = {
   },
   variants: {
     extend: {
-      textOpacity: ['dark']
+      textOpacity: ['dark'],
+      animation: ['hover', 'focus'],
+      boxDecorationBreak: ['hover', 'focus'],
+      transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
     },
   },
   plugins: [],
