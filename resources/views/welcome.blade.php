@@ -71,7 +71,7 @@
 
             <div class="flex items-center mt-5">
 
-              <label class="uppercase md:text-sm text-xs dark:text-white text-gray-600 text-light font-semibold">Nombre de
+              <label class="uppercase md:text-sm text-xs dark:text-white text-gray-500 text-light font-semibold">Nombre de
                 usuario</label>
             </div>
           </div>
