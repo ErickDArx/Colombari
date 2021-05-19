@@ -10,6 +10,8 @@ module.exports = {
       animation: ['hover', 'focus'],
       boxDecorationBreak: ['hover', 'focus'],
       transitionProperty: ['responsive', 'motion-safe', 'motion-reduce'],
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
     },
   },
   plugins: [],
