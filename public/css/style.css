@@ -1,21 +1,18 @@
-.img {
-    text-align: center;
-    background-position: center center;
+.portada {
+    background: url(../img/pexels-karolina-grabowska-4977479.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
 }
 
-.img img{
-	width: 100%;
-}
-
-.img:before {
-    content: "";
-    position: absolute;
+.portada::before{
+    content: '';
+    background: hsla(0, 0%, 0%, 0.685);
+    position:absolute;
     top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    left: 0;
+    z-index: -1;
 }
