@@ -52,7 +52,8 @@
     </nav>
 
     <div class="">
-      <div class="items-center py-10 grid grid-row-3 justify-center grid-flow-col gap-10">
+      <div
+        class="transition delay-150 ease-in-out items-center py-10 grid grid-row-3 justify-center grid-flow-col gap-10">
 
         <div class="dark:bg-gray-600 dark:text-gray-100 bg-gray-100 grid grid-cols-2 px-10 py-5">
           <div class=" border-gray-500 flex items-center">
@@ -86,8 +87,8 @@
                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
-              <input id="email"
-                class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-md appearance-none w-full block pl-12 focus:outline-none"
+              <input id="email" type="text"
+                class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-sm appearance-none w-full block pl-12 focus:outline-none"
                 placeholder="">
             </div>
           </div>
@@ -108,18 +109,17 @@
                     d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                 </svg>
               </div>
-              <input id="email"
-                class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-md appearance-none w-full block pl-12 focus:outline-none"
+              <input id="password" type="password"
+                class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-sm appearance-none w-full block pl-12 focus:outline-none"
                 placeholder="">
             </div>
           </div>
 
           <div class="col-span-2 mt-2.5">
             <div class="mx-auto">
-              <label class="flex items-center space-x-3">
-                <input type="checkbox" name="checked-demo" value="1"
-                  class=" h-5 w-5 border-2 border-gray-900 rounded-md checked:bg-blue-600 focus:outline-none">
-                <span class="text-gray-500 font-medium text-xs dark:text-white">Deseo tener mi sesion activa</span>
+              <label class="inline-flex items-center">
+                <input type="checkbox" class="h-5 w-5 form-check rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring-2 ">
+                <span class="ml-2 text-sm">Mantener activa mi sesión</span>
               </label>
             </div>
           </div>

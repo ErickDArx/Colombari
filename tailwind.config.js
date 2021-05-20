@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   purge: [],
   darkMode: 'class',
@@ -14,5 +16,9 @@ module.exports = {
       borderColor: ['checked'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')({
+      strategy:'class',
+    }),
+  ],
 }
