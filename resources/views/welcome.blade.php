@@ -30,7 +30,7 @@
       <div class="flex">
 
         <button id="switchTheme"
-          class="focus:outline-none focus:ring-2 transition duration-500 ease-in-out border-2 border-gray-800 dark:border-yellow-500 rounded-full h-10 w-10 flex items-center justify-center">
+          class="focus:outline-none focus:ring-2 focus:border-indigo-400 transition duration-500 ease-in-out border-2 border-indigo-500 dark:border-yellow-500 rounded-full h-10 w-10 flex items-center justify-center">
 
           <svg xmlns="http://www.w3.org/2000/svg"
             class="h-7 w-7 transition duration-500 ease-in-out text-transparent dark:text-yellow-500" fill="none"
@@ -40,7 +40,7 @@
           </svg>
 
           <svg xmlns="http://www.w3.org/2000/svg"
-            class="h-7 w-7 transition duration-500 ease-in-out absolute dark:text-transparent" fill="none"
+            class="h-7 w-7 transition duration-500 ease-in-out absolute text-indigo-500 dark:text-transparent" fill="none"
             viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
@@ -57,7 +57,7 @@
 
         <div class="dark:bg-gray-900 dark:text-gray-100 bg-gray-100 grid grid-cols-2 px-10 py-5">
 
-          <div class="border-gray-500 items-center">
+          <div class="items-center col-span-2">
             <h2 class="font-bold text-xl border-l-4 px-2 border-indigo-600">Inicio de sesión</h2>
           </div>
 
@@ -112,7 +112,7 @@
             <div class="mx-auto">
               <label class="">
                 <div class="flex items-center">
-                  <div> <input type="checkbox" name="option" id="option1" class="form-checkbox" />
+                  <div> <input type="checkbox" class="appearance-none form-check-inline focus:ring-2 focus:border-indigo-400 border-indigo-400 text-indigo-500 checked:bg-indigo-400" />
                   </div>
                   <div class="label-checked:bg-red-600 text-sm ml-2.5">Mantener activa mi sesión</div>
                 </div>
