@@ -55,17 +55,10 @@
       <div
         class="transition delay-150 ease-in-out items-center py-10 grid grid-row-3 justify-center grid-flow-col gap-10">
 
-        <div class="dark:bg-gray-600 dark:text-gray-100 bg-gray-100 grid grid-cols-2 px-10 py-5">
-          <div class=" border-gray-500 flex items-center">
-            <h2 class="font-bold">Inicio de sesión</h2>
-          </div>
+        <div class="dark:bg-gray-900 dark:text-gray-100 bg-gray-100 grid grid-cols-2 px-10 py-5">
 
-          <div class="ml-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M3 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1zm7.707 3.293a1 1 0 010 1.414L9.414 9H17a1 1 0 110 2H9.414l1.293 1.293a1 1 0 01-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0z"
-                clip-rule="evenodd" />
-            </svg>
+          <div class="border-gray-500 items-center">
+            <h2 class="font-bold text-xl border-l-4 px-2 border-indigo-600">Inicio de sesión</h2>
           </div>
 
           <div class="col-span-2 flex">
@@ -117,15 +110,19 @@
 
           <div class="col-span-2 mt-2.5">
             <div class="mx-auto">
-              <label class="inline-flex items-center">
-                <input type="checkbox" class="h-5 w-5 form-check rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring-2 ">
-                <span class="ml-2 text-sm">Mantener activa mi sesión</span>
+              <label class="">
+                <div class="flex items-center">
+                  <div> <input type="checkbox" name="option" id="option1" class="form-checkbox" />
+                  </div>
+                  <div class="label-checked:bg-red-600 text-sm ml-2.5">Mantener activa mi sesión</div>
+                </div>
+
               </label>
             </div>
           </div>
 
           <button
-            class="text-sm mt-2.5 col-span-2 block py-2 text-white rounded-sm bg-blue-500 hover:bg-blue-700 focus:outline-none">
+            class="text-sm mt-2 col-span-2 block py-2 text-white rounded-sm bg-indigo-500 hover:bg-blue-900 focus:outline-none">
             Iniciar sesión
           </button>
 
