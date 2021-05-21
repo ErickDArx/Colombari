@@ -1943,6 +1943,55 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/js/modo.js":
+/*!******************************!*\
+  !*** ./resources/js/modo.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+var _require = __webpack_require__(/*! axios */ "./node_modules/axios/index.js"),
+    axios = _require["default"];
+
+document.getElementById('switchTheme').addEventListener('click', function () {
+  var htmlClasses = document.querySelector('html').classList;
+
+  if (localStorage.theme == 'dark') {
+    htmlClasses.remove('dark');
+    localStorage.removeItem('theme');
+  } else {
+    htmlClasses.add('dark');
+    localStorage.theme = 'dark';
+  }
+});
+
+if (localStorage.theme === 'dark' || !'theme' in localStorage && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.querySelector('html').classList.add('dark');
+} else if (localStorage.theme === 'dark') {
+  document.querySelector('html').classList.add('dark');
+}
+
+new Vue({
+  el: '#app_login',
+  data: {
+    usuario: '',
+    contrasena: ''
+  },
+  methods: {
+    iniciarSesion: function iniciarSesion() {
+      axios.post('autenticacion', {
+        usuario: this.usuario,
+        contrasena: this.contrasena
+      }).then(function (response) {
+        console.log(response);
+      })["catch"](function (error) {
+        console.log(error.response.data);
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/lodash/lodash.js":
 /*!***************************************!*\
   !*** ./node_modules/lodash/lodash.js ***!
@@ -31761,6 +31810,7 @@ Vue.compile = compileToFunctions;
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/modo.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

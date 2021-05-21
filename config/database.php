@@ -93,7 +93,7 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'dsn'=>'mongodb+srv://colombari:colombari_21@cluster0.yra3o.mongodb.net/colombari?retryWrites=true&w=majority',
+            'dsn'=>'mongodb://127.0.0.1:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false',
             'database' => 'estudiantes',
         ],
 

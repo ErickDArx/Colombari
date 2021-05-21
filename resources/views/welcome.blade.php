@@ -51,10 +51,12 @@
 
     </nav>
 
-    <div class="">
+    <div id="app_login">
+      <form>
+
       <div
         class="transition delay-150 ease-in-out items-center py-10 grid grid-row-3 justify-center grid-flow-col gap-10">
-
+          @csrf
         <div class="dark:bg-gray-900 dark:text-gray-100 bg-gray-100 grid grid-cols-2 px-10 py-5">
 
           <div class="items-center col-span-2">
@@ -80,7 +82,7 @@
                     d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
-              <input id="email" type="text"
+              <input id="email" type="text" v-model="usuario"
                 class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-sm appearance-none w-full block pl-12 focus:outline-none"
                 placeholder="">
             </div>
@@ -102,7 +104,7 @@
                     d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                 </svg>
               </div>
-              <input id="password" type="password"
+              <input id="password" type="password" v-model="contrasena"
                 class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-sm appearance-none w-full block pl-12 focus:outline-none"
                 placeholder="">
             </div>
@@ -112,7 +114,7 @@
             <div class="mx-auto">
               <label class="">
                 <div class="flex items-center">
-                  <div> <input type="checkbox" class="appearance-none form-check-inline focus:ring-2 focus:border-indigo-400 border-indigo-400 text-indigo-500 checked:bg-indigo-400" />
+                  <div> <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} class="appearance-none form-check-inline focus:ring-2 focus:border-indigo-400 border-indigo-400 text-indigo-500 checked:bg-indigo-400" />
                   </div>
                   <div class="label-checked:bg-red-600 text-sm ml-2.5">Mantener activa mi sesión</div>
                 </div>
@@ -121,18 +123,20 @@
             </div>
           </div>
 
-          <button
-            class="text-sm mt-2 col-span-2 block py-2 text-white rounded-sm bg-indigo-500 hover:bg-blue-900 focus:outline-none">
+          <button type="button" @click="iniciarSesion()"
+            class="text-sm mt-2 col-span-2 block py-2 text-white rounded-sm bg-indigo-500 hover:bg-indigo-700 focus:outline-none">
             Iniciar sesión
           </button>
 
           <button
-            class="transition delay-150 ease-in-out text-sm mt-2.5 col-span-2 block py-2 dark:text-white text-gray-700 hover:text-white rounded-sm border-blue-500 hover:bg-blue-700 focus:outline-none">
-            Olvide la contraseña
+            class="transition delay-100 ease-in-out hover:text-indigo-100 text-sm mt-2.5 col-span-2 block py-2 dark:text-indigo-100 text-indigo-900  rounded-sm border-blue-500 hover:bg-indigo-700 focus:outline-none">
+            ¿Olvidaste la contraseña?
           </button>
-        </div>
+
+        </div>          
 
       </div>
+    </form>
     </div>
 
     <footer class="dark:text-white dark:bg-gray-700 bg-gray-100 ">
@@ -164,10 +168,6 @@
     </footer>
 
   </div>
-
-
   <script src="{{ asset('js/app.js') }}"></script>
-  <script src="{{ asset('js/modo.js') }}"></script>
 </body>
-
 </html>
