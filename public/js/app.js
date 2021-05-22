@@ -1973,14 +1973,14 @@ if (localStorage.theme === 'dark' || !'theme' in localStorage && window.matchMed
 new Vue({
   el: '#app_login',
   data: {
-    usuario: '',
-    contrasena: ''
+    username: '',
+    password: ''
   },
   methods: {
     iniciarSesion: function iniciarSesion() {
-      axios.post('autenticacion', {
-        usuario: this.usuario,
-        contrasena: this.contrasena
+      axios.post('login', {
+        username: this.username,
+        password: this.password
       }).then(function (response) {
         console.log(response);
       })["catch"](function (error) {

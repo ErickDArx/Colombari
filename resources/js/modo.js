@@ -21,13 +21,13 @@ new Vue({
     el: '#app_login',
     data: {
         usuario: '',
-        contrasena: ''
+        contrasena: '' 
     },
     methods: {
         iniciarSesion: function () {
             axios.post('autenticacion',{
                 usuario:this.usuario,
-                contrasena: this.contrasena
+                contrasena: this.contrasena,
             }).then(response=>{
                 console.log(response);
             }).catch(error=>{

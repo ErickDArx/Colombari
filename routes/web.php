@@ -1,6 +1,6 @@
 <?php
 
-// LLamar a los contraladores
+// LLamar a los controladores
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutenticacionController;
 
