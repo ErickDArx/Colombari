@@ -4,10 +4,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AutenticacionController;
 
-Route::get('/',[AutenticacionController::class,'index']);
+Route::get('/{any}', function () {
+    return view('welcome');
+})->where('any','.*');
 
-Route::post('/autenticacion',[AutenticacionController::class,'authenticate']);
+// Route::get('/',[AutenticacionController::class,'index']);
 
-Auth::routes();
+// Route::post('/autenticacion',[AutenticacionController::class,'authenticate']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
