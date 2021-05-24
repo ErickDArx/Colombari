@@ -27,6 +27,7 @@
     "dependencies": {
         "@tailwindcss/forms": "^0.3.2",
         "node-sass": "^6.0.0",
-        "tailwindcss": "^2.1.2"
+        "tailwindcss": "^2.1.2",
+        "vue-router": "^3.5.1"
     }
 }

@@ -15,16 +15,10 @@ class LoginController extends Controller
 
     protected $redirectTo = RouteServiceProvider::HOME;
 
-    public function showLoginForm()
-    {
-        return view('auth.login');
-    }
-
     // Decirle a Lavarel que haga la verificacion por medio del nombre de usuario
     public function username()
     {
         return 'username';
     }
-
 
 }

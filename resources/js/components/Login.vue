@@ -1,6 +1,6 @@
 <template>
-    <div id="app_login" class="portada">
-        <form id="acceso">
+    <div>
+        <form>
             <div
                 class="transition delay-150 ease-in-out items-center py-10 grid grid-row-3 justify-center grid-flow-col gap-10"
             >
@@ -49,7 +49,7 @@
                             <input
                                 name="username"
                                 type="text"
-                                v-model="username"
+                                v-model="form.username"
                                 class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-sm appearance-none w-full block pl-12 focus:outline-none"
                                 placeholder=""
                             />
@@ -90,7 +90,7 @@
                             <input
                                 name="password"
                                 type="password"
-                                v-model="password"
+                                v-model="form.password"
                                 class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-sm appearance-none w-full block pl-12 focus:outline-none"
                                 placeholder=""
                             />
@@ -118,9 +118,8 @@
                         </div>
                     </div>
 
-                    <button
-                        @click="iniciarSesion()"
-                        type="button"
+                    <button @click.prevent="login"
+                        type="submit"
                         class="text-sm mt-2 col-span-2 block py-2 text-white rounded-sm bg-indigo-500 hover:bg-indigo-700 focus:outline-none"
                     >
                         Iniciar sesión
@@ -136,3 +135,27 @@
         </form>
     </div>
 </template>
+
+<script>
+
+export default({
+    data() {
+        return{
+            form:{
+                username: '',
+                password: '',
+            },
+            errors:[]
+        }
+    },
+    methods:{
+        login(){
+            axios.post('/api/login', this.form).then(()=>{
+                this.$router.push({name:'Home'});
+            }).catch((error)=>{
+                this.errors = error.response.data.errors;
+            })
+        }
+    }
+})
+</script>

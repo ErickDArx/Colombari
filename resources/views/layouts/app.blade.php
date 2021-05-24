@@ -19,9 +19,11 @@
     <div id="app" class="flex flex-col h-screen justify-between">
 
         <app-nav></app-nav>
-        <app-login></app-login>
-        <app-footer></app-footer>
+        <div class="container mx-auto py-2">
+            <router-view></router-view>
+        </div>
 
+        <app-footer></app-footer>
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
