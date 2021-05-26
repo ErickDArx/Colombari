@@ -1,5 +1,7 @@
 <template>
-    <nav class="transition duration-500 ease-in-out shadow-xl container mx-auto px-10 dark:bg-gray-900 bg-gray-100 flex items-center justify-between flex-wrap bg-teal-500 p-6">
+    <nav
+        class="transition duration-500 ease-in-out shadow-xl container mx-auto px-10 dark:bg-gray-900 bg-gray-100 flex items-center justify-between flex-wrap bg-teal-500 p-6"
+    >
         <div class="items-center flex-shrink-0 dark:text-white mr-6">
             <div class="space-y-1">
                 <a href="/">
@@ -18,7 +20,7 @@
 
         <div class="flex">
             <button
-            v-show="mode==false"
+                v-show="mode == false"
                 id="switchTheme"
                 class="focus:outline-none focus:ring-2 focus:border-indigo-400 transition duration-500 ease-in-out border-2 border-indigo-500 dark:border-yellow-500 rounded-full h-10 w-10 flex items-center justify-center"
             >
@@ -53,11 +55,9 @@
                 </svg>
             </button>
 
-            <div v-show="mode" v-on:click="isActive = !isActive">
+            <div v-show="mode">
                 <div class="flex items-center">
-                    <h3 class="mr-2 text-sm"></h3>
-
-                    <button
+                    <button v-click-outside="hide" @click="toggle"
                         class="dark:text-gray-300 text-indigo-400 flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-indigo-400 transition duration-150 ease-in-out"
                         id="user-menu"
                         aria-label="User menu"
@@ -83,7 +83,7 @@
         </div>
 
         <div
-            v-show="isActive"
+            v-show="opened"
             class="origin-top-right absolute right-8 top-20 w-48 rounded-md shadow-lg"
         >
             <div
@@ -179,15 +179,24 @@
 </template>
 
 <script>
+import ClickOutside from 'vue-click-outside'
 export default {
     data() {
         return {
             user: null,
             mode: false,
-            isActive: false
+            isActive: false,
+            opened: false
         };
     },
     methods: {
+        toggle() {
+            this.opened = true;
+        },
+
+        hide() {
+            this.opened = false;
+        },
         logout() {
             axios.post("/api/logout").then(() => {
                 this.$router.push({ name: "Login" }, (this.mode = false));
@@ -196,8 +205,13 @@ export default {
     },
     mounted() {
         axios.get("/api/user").then(res => {
-            (this.user = res.data), (this.mode = true);
+            (this.user = res.data),
+                (this.mode = true),
+                (this.popupItem = this.$el);
         });
+    },
+    directives: {
+        ClickOutside
     }
 };
 </script>

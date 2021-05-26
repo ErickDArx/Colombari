@@ -14,11 +14,12 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 
-<body class="dark:bg-gray-800">
+<body class="dark:bg-gray-800 portada">
 
     <div id="app" class="flex flex-col h-screen justify-between">
 
         <div>
+            <app-nav></app-nav>
             <router-view></router-view>
         </div>
 

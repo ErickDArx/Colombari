@@ -1,4 +1,3 @@
-const { default: axios } = require("axios");
 
 document.getElementById('switchTheme').addEventListener('click', function () {
     let htmlClasses = document.querySelector('html').classList;

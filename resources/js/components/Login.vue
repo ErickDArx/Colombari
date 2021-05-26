@@ -1,10 +1,11 @@
 <template>
     <div>
         <div
-            class="transition delay-150 ease-in-out items-center py-10 grid grid-row-3 justify-center grid-flow-col gap-10"
+            class="transition delay-150 ease-in-out py-10 flex items-center justify-center"
         >
+
             <div
-                class="dark:bg-gray-900 dark:text-gray-100 bg-gray-100 grid grid-cols-2 px-10 py-5"
+                class="dark:bg-gray-900 dark:text-gray-200 bg-gray-100 grid px-10 py-8 grid-cols-2"
             >
                 <div class="items-center col-span-2">
                     <h2
@@ -45,13 +46,37 @@
                                 />
                             </svg>
                         </div>
+
                         <input
                             name="username"
                             type="text"
                             v-model="form.username"
+                            v-bind:class="{'dark:border-red-400 border-red-500 border-2': errors.username}"
                             class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-sm appearance-none w-full block pl-12 focus:outline-none"
                             placeholder=""
                         />
+                    </div>
+                    <div
+                        v-if="errors.username"
+                        class="flex gap-1 items-center mt-1 mb-1 transition duration-300 ease-in-out"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4 dark:text-red-400 text-red-500"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                        </svg>
+                        <p class="dark:text-red-400 text-red-500 text-sm">
+                            {{ errors.username[0] }}
+                        </p>
                     </div>
                 </div>
 
@@ -90,40 +115,39 @@
                             name="password"
                             type="password"
                             v-model="form.password"
+                            v-bind:class="{'dark:border-red-400 border-red-500 border-2':errors.password}"
                             class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-sm appearance-none w-full block pl-12 focus:outline-none"
                             placeholder=""
                         />
                     </div>
-                </div>
-
-                <div class="col-span-2 mt-2.5">
-                    <div class="mx-auto">
-                        <label class="">
-                            <div class="flex items-center">
-                                <div>
-                                    <input
-                                        type="checkbox"
-                                        name="remember"
-                                        class="appearance-none form-check-inline
-                                        focus:ring-2 focus:border-indigo-400
-                                        border-indigo-400
-                                        text-indigo-500checked:bg-indigo-400"
-                                    />
-                                </div>
-                                <div
-                                    class="label-checked:bg-red-600 text-sm ml-2.5"
-                                >
-                                    Mantener activa mi sesión
-                                </div>
-                            </div>
-                        </label>
+                                        <div
+                        v-if="errors.username"
+                        class="flex gap-1 items-center mt-1 mb-1 transition duration-300 ease-in-out"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-4 w-4 dark:text-red-400 text-red-500"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                        </svg>
+                        <p class="dark:text-red-400 text-red-500 text-sm">
+                            {{ errors.password[0] }}
+                        </p>
                     </div>
                 </div>
 
                 <button
                     @click.prevent="login"
                     type="submit"
-                    class="text-sm mt-2 col-span-2 block py-2 text-white rounded-sm bg-indigo-500 hover:bg-indigo-700 focus:outline-none"
+                    class="text-sm mt-4 col-span-2 block py-2 text-white rounded-sm bg-indigo-500 hover:bg-indigo-700 focus:outline-none"
                 >
                     Iniciar sesión
                 </button>
@@ -139,6 +163,7 @@
 </template>
 
 <script>
+import ClickOutside from "vue-click-outside";
 export default {
     data() {
         return {
@@ -146,20 +171,36 @@ export default {
                 username: "",
                 password: ""
             },
-            errors: []
+            errors: [],
+            opened: false
         };
     },
     methods: {
+        toggle() {
+            this.opened = true;
+        },
+
+        hide() {
+            this.opened = false;
+        },
         login() {
             axios
                 .post("/api/login", this.form)
                 .then(() => {
-                    this.$router.push({ name: "Home" });
+                    (this.popupItem = this.$el),
+                        this.$router.push({ name: "Home" });
                 })
                 .catch(error => {
                     this.errors = error.response.data.errors;
                 });
         }
+    },
+    mounted() {
+        // prevent click outside event with popupItem.
+        this.popupItem = this.$el;
+    },
+    directives: {
+        ClickOutside
     }
 };
 </script>

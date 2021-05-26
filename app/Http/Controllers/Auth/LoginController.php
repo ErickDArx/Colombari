@@ -15,6 +15,18 @@ class LoginController extends Controller
 
     protected $redirectTo = RouteServiceProvider::HOME;
 
+    // Editar las validaciones
+    protected function validateLogin(Request $request)
+    {
+        $request->validate([
+            $this->username() => 'required|string',
+            'password' => 'required|string',
+        ],[
+            'username.required'=>'El campo no puede quedar vacío.',
+            'password.required'=>'No olvides colocar tu contraseña.'
+        ]);
+    }
+
     // Decirle a Lavarel que haga la verificacion por medio del nombre de usuario
     public function username()
     {
