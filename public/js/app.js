@@ -2380,11 +2380,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -46009,24 +46004,7 @@ var render = function() {
         "transition duration-500 ease-in-out shadow-xl container mx-auto px-10 dark:bg-gray-900 bg-gray-100 flex items-center justify-between flex-wrap bg-teal-500 p-6"
     },
     [
-      _c(
-        "div",
-        { staticClass: "items-center flex-shrink-0 dark:text-white mr-6" },
-        [
-          _vm.user
-            ? _c("Slide", { attrs: { noOverlay: "" } }, [
-                _c("a", { attrs: { id: "home", href: "#" } }, [
-                  _c("span", [_vm._v("Home")])
-                ])
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div")
-        ],
-        1
-      ),
+      _vm._m(0),
       _vm._v(" "),
       _c(
         "div",
@@ -46266,27 +46244,35 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "space-y-1" }, [
-      _c("a", { attrs: { href: "/" } }, [
-        _c(
-          "span",
-          {
-            staticClass:
-              "block font-semibold text-base tracking-tight dark:text-gray-200"
-          },
-          [_vm._v("Gestión de estudiantes")]
-        ),
+    return _c(
+      "div",
+      { staticClass: "items-center flex-shrink-0 dark:text-white mr-6" },
+      [
+        _c("div", { staticClass: "space-y-1" }, [
+          _c("a", { attrs: { href: "/" } }, [
+            _c(
+              "span",
+              {
+                staticClass:
+                  "block font-semibold text-base tracking-tight dark:text-gray-200"
+              },
+              [_vm._v("Gestión de estudiantes")]
+            ),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                staticClass:
+                  "block text-gray-500 font-weight-light text-sm tracking-tight"
+              },
+              [_vm._v("Augusto Colombari Chicoli")]
+            )
+          ])
+        ]),
         _vm._v(" "),
-        _c(
-          "span",
-          {
-            staticClass:
-              "block text-gray-500 font-weight-light text-sm tracking-tight"
-          },
-          [_vm._v("Augusto Colombari Chicoli")]
-        )
-      ])
-    ])
+        _c("div")
+      ]
+    )
   }
 ]
 render._withStripped = true

@@ -3,11 +3,6 @@
         class="transition duration-500 ease-in-out shadow-xl container mx-auto px-10 dark:bg-gray-900 bg-gray-100 flex items-center justify-between flex-wrap bg-teal-500 p-6"
     >
         <div class="items-center flex-shrink-0 dark:text-white mr-6">
-            <Slide noOverlay v-if="user">
-                <a id="home" href="#">
-                    <span>Home</span>
-                </a>
-            </Slide>
             <div class="space-y-1">
                 <a href="/">
                     <span
