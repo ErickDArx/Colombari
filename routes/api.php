@@ -23,10 +23,12 @@ Route::middleware('auth:sanctum')->get('/login', function (Request $request) {
     return true;
 });
 
-
+Route::group(['middleware' => ['web']], function () {
 Route::post('login', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout']);
 Route::post('register', [RegisterController::class, 'register']);
+
+});
 
 // Route::post('register', 'RegisterController@register');
 // Route::post('login', 'LoginController@login');
