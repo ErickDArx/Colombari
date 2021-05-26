@@ -12,20 +12,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 </head>
 
-<body class="dark:bg-gray-800 portada">
+<body class="dark:bg-gray-800">
 
     <div id="app" class="flex flex-col h-screen justify-between">
-
         <div>
             <app-nav></app-nav>
-            <router-view></router-view>
+            <router-view>
+                
+            </router-view>
         </div>
-
         <app-footer></app-footer>
     </div>
-
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

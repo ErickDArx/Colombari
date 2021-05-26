@@ -3,6 +3,11 @@
         class="transition duration-500 ease-in-out shadow-xl container mx-auto px-10 dark:bg-gray-900 bg-gray-100 flex items-center justify-between flex-wrap bg-teal-500 p-6"
     >
         <div class="items-center flex-shrink-0 dark:text-white mr-6">
+            <Slide noOverlay v-if="user">
+                <a id="home" href="#">
+                    <span>Home</span>
+                </a>
+            </Slide>
             <div class="space-y-1">
                 <a href="/">
                     <span
@@ -18,11 +23,35 @@
             <div></div>
         </div>
 
-        <div class="flex">
+        <div
+            v-click-outside="onClickOutside"
+            class="flex items-center justify-center gap-1"
+        >
             <button
-                v-show="mode == false"
+                type="button"
+                v-if="user"
+                @click="active = true"
+                class="dark:text-gray-300 text-indigo-400 flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-indigo-400 transition duration-150 ease-in-out"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-8 w-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                </svg>
+            </button>
+
+            <button
                 id="switchTheme"
-                class="focus:outline-none focus:ring-2 focus:border-indigo-400 transition duration-500 ease-in-out border-2 border-indigo-500 dark:border-yellow-500 rounded-full h-10 w-10 flex items-center justify-center"
+                class="focus:outline-none focus:ring-2 focus:border-indigo-400 transition duration-500 ease-in-out rounded-full h-10 w-10 flex items-center justify-center"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -54,36 +83,10 @@
                     />
                 </svg>
             </button>
-
-            <div v-show="mode">
-                <div class="flex items-center">
-                    <button v-click-outside="hide" @click="toggle"
-                        class="dark:text-gray-300 text-indigo-400 flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-indigo-400 transition duration-150 ease-in-out"
-                        id="user-menu"
-                        aria-label="User menu"
-                        aria-haspopup="true"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-8 w-8"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                            />
-                        </svg>
-                    </button>
-                </div>
-            </div>
         </div>
 
         <div
-            v-show="opened"
+            v-show="active"
             class="origin-top-right absolute right-8 top-20 w-48 rounded-md shadow-lg"
         >
             <div
@@ -112,43 +115,6 @@
                         />
                     </svg>
                     <p class="ml-2 dark:text-gray-300">Mi Perfíl</p>
-                </a>
-                <a
-                    class="flex items-center px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
-                    role="menuitem"
-                    id="switchTheme"
-                >
-                    <svg
-                        v-on:click="mode = !mode"
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-7 w-7 transition duration-500 ease-in-out text-transparent dark:text-yellow-500"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                        />
-                    </svg>
-
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-7 w-7 transition duration-500 ease-in-out absolute text-indigo-500 dark:text-transparent"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                        />
-                    </svg>
-                    <p class="ml-2 dark:text-gray-300">Modo oscuro</p>
                 </a>
 
                 <a
@@ -179,39 +145,48 @@
 </template>
 
 <script>
-import ClickOutside from 'vue-click-outside'
+import vClickOutside from "v-click-outside";
+import { Slide } from "vue-burger-menu";
 export default {
     data() {
         return {
             user: null,
             mode: false,
-            isActive: false,
-            opened: false
+            active: false,
+            opened: false,
+            vcoConfig: {
+                handler: this.handler,
+                middleware: this.middleware,
+                events: ["dblclick", "click"],
+                // Note: The default value is true, but in case you want to activate / deactivate
+                //       this directive dynamically use this attribute.
+                isActive: true,
+                // Note: The default value is true. See "Detecting Iframe Clicks" section
+                //       to understand why this behaviour is behind a flag.
+                detectIFrame: true
+            }
         };
     },
+    components: {
+        Slide // Register your component
+    },
     methods: {
-        toggle() {
-            this.opened = true;
-        },
-
-        hide() {
-            this.opened = false;
-        },
         logout() {
             axios.post("/api/logout").then(() => {
                 this.$router.push({ name: "Login" }, (this.mode = false));
             });
+        },
+        onClickOutside() {
+            this.active = false;
         }
     },
     mounted() {
         axios.get("/api/user").then(res => {
-            (this.user = res.data),
-                (this.mode = true),
-                (this.popupItem = this.$el);
+            (this.user = res.data), (this.popupItem = this.$el);
         });
     },
     directives: {
-        ClickOutside
+        clickOutside: vClickOutside.directive
     }
 };
 </script>

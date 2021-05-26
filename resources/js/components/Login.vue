@@ -3,7 +3,6 @@
         <div
             class="transition delay-150 ease-in-out py-10 flex items-center justify-center"
         >
-
             <div
                 class="dark:bg-gray-900 dark:text-gray-200 bg-gray-100 grid px-10 py-8 grid-cols-2"
             >
@@ -51,7 +50,10 @@
                             name="username"
                             type="text"
                             v-model="form.username"
-                            v-bind:class="{'dark:border-red-400 border-red-500 border-2': errors.username}"
+                            v-bind:class="{
+                                'dark:border-red-400 border-red-500 border-2':
+                                    errors.username
+                            }"
                             class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-sm appearance-none w-full block pl-12 focus:outline-none"
                             placeholder=""
                         />
@@ -115,12 +117,15 @@
                             name="password"
                             type="password"
                             v-model="form.password"
-                            v-bind:class="{'dark:border-red-400 border-red-500 border-2':errors.password}"
+                            v-bind:class="{
+                                'dark:border-red-400 border-red-500 border-2':
+                                    errors.password
+                            }"
                             class="py-2.5 bg-white placeholder-gray-400 text-gray-900 rounded-sm shadow-sm appearance-none w-full block pl-12 focus:outline-none"
                             placeholder=""
                         />
                     </div>
-                                        <div
+                    <div
                         v-if="errors.username"
                         class="flex gap-1 items-center mt-1 mb-1 transition duration-300 ease-in-out"
                     >
@@ -172,7 +177,7 @@ export default {
                 password: ""
             },
             errors: [],
-            opened: false
+            opened: false,
         };
     },
     methods: {
@@ -197,7 +202,7 @@ export default {
     },
     mounted() {
         // prevent click outside event with popupItem.
-        this.popupItem = this.$el;
+        (this.popupItem = this.$el);
     },
     directives: {
         ClickOutside

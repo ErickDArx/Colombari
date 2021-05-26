@@ -1,4 +1,5 @@
 import Login from './components/Login';
+import Registro from './components/Register';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import axios from 'axios';
@@ -28,6 +29,11 @@ export default ({
             path: '/Footer',
             name: 'footer',
             component: Footer
+        },
+        {
+            path: '/Registro',
+            name: 'registro',
+            component: Registro
         },
         
     ]

@@ -4,7 +4,7 @@
       <div class="flow-root">
         <div class="justify-start">
           <p class="text-sm">
-            ©  - todos los derechos reservados
+            © {{currentDateTime()}} - todos los derechos reservados
           </p>
         </div>
       </div>
@@ -26,3 +26,37 @@
     </div>
   </footer>
 </template>
+
+<script>
+import moment from "moment";
+
+export default {
+    data() {
+        return {
+            form: {
+                name: "",
+                password: "",
+                password_confirmation: "",
+                email: ""
+            },
+            errors: [],
+            opened: false
+        };
+    },
+    methods: {
+        currentDateTime() {
+            return moment().format(" YYYY");
+        },
+        register() {
+            axios
+                .post("/api/register", this.form)
+                .then(() => {
+                    this.$router.push({ name: "Home" });
+                })
+                .catch(error => {
+                    this.errors = error.response.data.errors;
+                });
+        }
+    }
+};
+</script>

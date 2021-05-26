@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import ClickOutside from 'vue-click-outside'
+import ClickOutside from "vue-click-outside";
+
 export default {
     data() {
         return {
-            user: null,
-            isActive: false
+            user: null
         };
     },
     methods: {
