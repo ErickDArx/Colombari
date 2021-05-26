@@ -93,7 +93,7 @@ return [
 
         'mongodb' => [
             'driver' => 'mongodb',
-            'dsn'=>'mongodb+srv://colombari:colombari_21@cluster0.yra3o.mongodb.net/estudiantes?retryWrites=true&w=majority',
+            'dsn'=>'mongodb://colombari:colombari_21@cluster0-shard-00-00.yra3o.mongodb.net:27017,cluster0-shard-00-01.yra3o.mongodb.net:27017,cluster0-shard-00-02.yra3o.mongodb.net:27017/estudiantes?ssl=true&replicaSet=atlas-j1bj6z-shard-0&authSource=admin&retryWrites=true&w=majority',
             'database' => 'estudiantes',
         ],
 
