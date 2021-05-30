@@ -26,6 +26,18 @@ export default ({
             }
         },
         {
+            path: '/Perfil',
+            name: 'Perfil',
+            component: Home,
+            beforeEnter: (to, form, next)=>{
+                axios.get('/api/login').then(()=>{
+                    next()
+                }).catch(()=>{
+                    return next({name:'Login'})
+                });
+            }
+        },
+        {
             path: '/Footer',
             name: 'footer',
             component: Footer

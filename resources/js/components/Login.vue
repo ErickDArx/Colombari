@@ -196,7 +196,7 @@ export default {
             await axios
                 .post("/api/login", this.form)
                 .then(() => {
-                    this.$router.push({ name: "Home" })
+                    this.$router.push({ name: "Home" });
                     return dispatch("getUser");
                 })
                 .catch(error => {
@@ -206,7 +206,7 @@ export default {
     },
     mounted() {
         // prevent click outside event with popupItem.
-        this.popupItem = this.$el;
+        (this.popupItem = this.$el), axios.get("/api/user");
     },
     directives: {
         ClickOutside

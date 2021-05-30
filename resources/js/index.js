@@ -8,12 +8,10 @@ export default new Vuex.Store({
     state: {
         user: null,
         auth: false,
-        errors: false
     },
     mutations: {
         SET_USER(state, value) {
             state.user = user;
-            state.errors = error;
             state.auth = Boolean(user);
         }
     },
