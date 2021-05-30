@@ -7,6 +7,10 @@
                 class="dark:bg-gray-900 dark:text-gray-200 bg-gray-100 grid px-10 py-8 grid-cols-2"
             >
                 <div class="items-center col-span-2">
+                    <div class="rounded bg-red-400 text-sm text-gray-200"></div>
+                </div>
+
+                <div class="items-center col-span-2">
                     <h2
                         class="font-bold text-xl border-l-4 px-2 border-indigo-600"
                     >
@@ -177,7 +181,7 @@ export default {
                 password: ""
             },
             errors: [],
-            opened: false,
+            opened: false
         };
     },
     methods: {
@@ -188,12 +192,12 @@ export default {
         hide() {
             this.opened = false;
         },
-        login() {
-            axios
+        async login() {
+            await axios
                 .post("/api/login", this.form)
                 .then(() => {
-                    (this.popupItem = this.$el),
-                        this.$router.push({ name: "Home" });
+                    this.$router.push({ name: "Home" })
+                    return dispatch("getUser");
                 })
                 .catch(error => {
                     this.errors = error.response.data.errors;
@@ -202,7 +206,7 @@ export default {
     },
     mounted() {
         // prevent click outside event with popupItem.
-        (this.popupItem = this.$el);
+        this.popupItem = this.$el;
     },
     directives: {
         ClickOutside

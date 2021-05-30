@@ -23,8 +23,6 @@
             class="flex items-center justify-center gap-1"
         >
             <button
-                type="button"
-                v-if="user"
                 @click="active = true"
                 class="dark:text-gray-300 text-indigo-400 flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-indigo-400 transition duration-150 ease-in-out"
             >
@@ -176,9 +174,7 @@ export default {
         }
     },
     mounted() {
-        axios.get("/api/user").then(res => {
-            (this.user = res.data), (this.popupItem = this.$el);
-        });
+        this.popupItem = this.$el;
     },
     directives: {
         clickOutside: vClickOutside.directive
