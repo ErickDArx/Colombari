@@ -22,8 +22,8 @@ class LoginController extends Controller
             $this->username() => 'required|string',
             'password' => 'required|string',
         ],[
-            'username.required'=>'El campo no puede quedar vacío.',
-            'password.required'=>'No olvides colocar tu contraseña.'
+            'username.required'=>'El campo no puede estar vacío.',
+            'password.required'=>'El campo no puede estar vacío.'
         ]);
     }
 

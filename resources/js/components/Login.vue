@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div
+    <div class="">
+        <div 
             class="transition delay-150 ease-in-out py-10 flex items-center justify-center"
         >
             <div
@@ -51,6 +51,7 @@
                         </div>
 
                         <input
+                            autocomplete="off"
                             name="username"
                             type="text"
                             v-model="form.username"

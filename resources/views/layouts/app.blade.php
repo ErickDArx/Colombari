@@ -18,7 +18,7 @@
 <body class="dark:bg-gray-800">
 
     <div id="app" class="flex flex-col h-screen justify-between">
-        <div>
+        <div class="">
             <app-nav></app-nav>
             <router-view>
                 

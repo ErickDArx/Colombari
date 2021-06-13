@@ -2,6 +2,8 @@ import Login from './components/Login';
 import Registro from './components/Register';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import Perfil from './components/Perfil';
+import Docentes from './components/Docentes';
 import axios from 'axios';
 
 export default ({
@@ -28,7 +30,7 @@ export default ({
         {
             path: '/Perfil',
             name: 'Perfil',
-            component: Home,
+            component: Perfil,
             beforeEnter: (to, form, next)=>{
                 axios.get('/api/login').then(()=>{
                     next()
@@ -41,6 +43,11 @@ export default ({
             path: '/Footer',
             name: 'footer',
             component: Footer
+        },
+        {
+            path: '/Docentes',
+            name: 'docentes',
+            component: Docentes
         },
         {
             path: '/Registro',

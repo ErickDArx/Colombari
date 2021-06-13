@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\DocentesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,6 +28,5 @@ Route::post('login', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout']);
 Route::post('register', [RegisterController::class, 'register']);
 
-// Route::post('register', 'RegisterController@register');
-// Route::post('login', 'LoginController@login');
-// Route::post('logout', 'LoginController@logout');
+Route::get('teachers', [DocentesController::class, 'index']);
+Route::post('teachers/store', [DocentesController::class, 'store']);
