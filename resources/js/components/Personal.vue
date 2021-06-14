@@ -135,6 +135,7 @@
 
                 <div class="z-10">
                     <button
+                        @click="Docentes"
                         class="bg-purple-900 px-10 relative py-2 rounded-md mt-2 focus:outline-none hover:bg-purple-800"
                     >
                         Ingresar
@@ -221,14 +222,18 @@ export default {
         },
         Perfil() {
             this.$router.push("Perfil");
+        },
+        Docentes() {
+            this.$router.push("Docentes");
         }
     },
     mounted() {
-        axios.get("/api/user").then(res => {
-            this.user = res.data;
-        }).catch(error=> {
-            
-        });
+        axios
+            .get("/api/user")
+            .then(res => {
+                this.user = res.data;
+            })
+            .catch(error => {});
     }
 };
 </script>

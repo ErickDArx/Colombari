@@ -1,8 +1,8 @@
 <template>
-<nav class="transition duration-500 ease-in-out shadow-xl container mx-auto px-10 dark:bg-gray-900 bg-gray-100 flex items-center justify-between flex-wrap bg-teal-500 p-6">
+<nav class="z-50 transition duration-500 ease-in-out shadow-xl container mx-auto px-10 dark:bg-gray-900 bg-gray-100 flex items-center justify-between flex-wrap bg-teal-500 p-6">
   <div class="items-center flex-shrink-0 dark:text-white mr-6">
     <div class="space-y-1">
-      <a href="/">
+      <a href="/Principal">
         <span class="block font-semibold text-base tracking-tight dark:text-gray-200">Gestión de estudiantes</span>
         <span class="block text-gray-500 font-weight-light text-sm tracking-tight">Augusto Colombari Chicoli</span>
       </a>
@@ -28,7 +28,7 @@
     </button>
   </div>
 
-  <div v-show="active" class="origin-top-right absolute right-8 top-20 w-48 rounded-md shadow-lg">
+  <div v-show="active" class="z-50 origin-top-right absolute right-8 top-20 w-48 rounded-md shadow-lg">
     <div class="py-1 rounded-md dark:text-gray-300 dark:bg-gray-700 bg-white shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
       <a href="#" class="flex items-center px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out" role="menuitem">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500 dark:text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">

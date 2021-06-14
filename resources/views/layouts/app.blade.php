@@ -21,7 +21,7 @@
         <div class="">
             <app-nav></app-nav>
             <router-view>
-                
+
             </router-view>
         </div>
         <app-footer></app-footer>

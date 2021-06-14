@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Perfil from './components/Perfil';
 import Docentes from './components/Docentes';
+import TeacherList from './components/ListaDocentes';
 import axios from 'axios';
 
 export default ({
@@ -13,7 +14,7 @@ export default ({
         {
             path: '/',
             name: 'Login',
-            component: Login
+            component: Login,
         },
         {
             path: '/Principal',
@@ -48,6 +49,11 @@ export default ({
             path: '/Docentes',
             name: 'docentes',
             component: Docentes
+        },
+        {
+            path: '/ListaDocentes',
+            name: 'ListaDocentes',
+            component: TeacherList
         },
         {
             path: '/Registro',

@@ -23,7 +23,7 @@ class LoginController extends Controller
             'password' => 'required|string',
         ],[
             'username.required'=>'El campo no puede estar vacío.',
-            'password.required'=>'El campo no puede estar vacío.'
+            'password.required'=>'El campo no puede estar vacío.',
         ]);
     }
 

@@ -3,21 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Docentes;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class DocentesController extends Controller
 {
 
-    public function index(Request $request)
+    public function index()
     {
         $users = Docentes::orderBy('name', 'desc')->get();
         return $users;
     }
 
-    public function create(Request $request)
+    public function create()
     {
-
+        //
     }
 
     public function store(Request $request)

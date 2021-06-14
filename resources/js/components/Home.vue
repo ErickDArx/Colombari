@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="relative">
+        <Loading v-if="isLoading" class="fixed inset-0"></Loading>
         <header class="bg-white shadow dark:bg-gray-700">
             <div class=" mx-auto py-6 px-10 text-gray-900 dark:text-gray-200">
                 <h1 class="text-2xl font-bold ">
@@ -18,7 +19,8 @@
 export default {
     data() {
         return {
-            user: null
+            user: null,
+            isLoading: true
         };
     },
     methods: {
@@ -31,6 +33,7 @@ export default {
     mounted() {
         axios.get("/api/user").then(res => {
             this.user = res.data;
+            this.isLoading = false;
         });
     }
 };
