@@ -16,7 +16,6 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     </button>
-
     <button id="switchTheme" class="focus:outline-none focus:ring-2 focus:border-indigo-400 transition duration-500 ease-in-out rounded-full h-10 w-10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 transition duration-500 ease-in-out text-transparent dark:text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -46,10 +45,10 @@
     </div>
   </div>
 </nav>
+
 </template>
 
 <script>
-import vClickOutside from "v-click-outside";
 export default {
     data() {
         return {
@@ -57,17 +56,6 @@ export default {
             mode: false,
             active: false,
             opened: false,
-            vcoConfig: {
-                handler: this.handler,
-                middleware: this.middleware,
-                events: ["dblclick", "click"],
-                // Note: The default value is true, but in case you want to activate / deactivate
-                //       this directive dynamically use this attribute.
-                isActive: true,
-                // Note: The default value is true. See "Detecting Iframe Clicks" section
-                //       to understand why this behaviour is behind a flag.
-                detectIFrame: true
-            }
         };
     },
     methods: {
@@ -76,15 +64,9 @@ export default {
                 this.$router.push({ name: "Login" }, (this.mode = false));
             });
         },
-        onClickOutside() {
-            this.active = false;
-        }
     },
     mounted() {
         this.popupItem = this.$el;
     },
-    directives: {
-        clickOutside: vClickOutside.directive
-    }
 };
 </script>

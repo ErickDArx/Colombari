@@ -12,14 +12,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
 </head>
 
 <body class="dark:bg-gray-800">
 
     <div id="app" class="flex flex-col h-screen justify-between">
         <div class="">
-            <app-nav></app-nav>
             <router-view>
 
             </router-view>
@@ -27,7 +25,11 @@
         <app-footer></app-footer>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
-
+    <script>
+        MicroModal.init();
+        MicroModal.show('modal-1');
+        MicroModal.close('modal-1');
+    </script>
 </body>
 
 </html>

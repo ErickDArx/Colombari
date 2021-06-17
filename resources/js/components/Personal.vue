@@ -211,7 +211,8 @@
 export default {
     data() {
         return {
-            user: null
+            user: null,
+            isLoading: true
         };
     },
     methods: {
@@ -231,7 +232,7 @@ export default {
         axios
             .get("/api/user")
             .then(res => {
-                this.user = res.data;
+                (this.user = res.data), (this.isLoading = false);
             })
             .catch(error => {});
     }

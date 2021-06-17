@@ -11,7 +11,7 @@ class usuario extends Seeder
 
     public function run()
     {
-        DB::table('docentes')->insert([
+        DB::table('teacher')->insert([
             'name' => 'erick',
             'username' => 'erick',
             'password' => encrypt('12345678'),

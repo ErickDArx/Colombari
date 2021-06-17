@@ -2,29 +2,10 @@
     <main class="">
         <div class="flex flex-col justify-between relative">
             <loading v-if="isLoading"></loading>
-
             <div
                 class="relative flex flex-col bg-gradient-to-r from-indigo-600 via-blue-700 to-blue-800 shadow-xl"
             >
-                <div
-                    class="absolute right-4 top-2 text-sm text-gray-300 flex gap-2 items-center"
-                >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-                        />
-                    </svg>
-                    Cerrar sesión
-                </div>
+
                 <div
                     class="absolute shadow-xl left-0 top-0 bg-gray-300 px-4 py-2 text-gray-800 flex items-center rounded-br-2xl"
                 >
@@ -66,7 +47,7 @@
                         <h1
                             class="text-lg font-semibold text-gray-100 truncate"
                         >
-                            Erick Matamoros Fernández
+                            {{ user.name }} {{ user.lastname }}
                         </h1>
                         <div class="py-2 absolute mt-9 flex gap-10">
                             <div>
@@ -99,9 +80,7 @@
                     </div>
                 </div>
             </div>
-
             <div class="bg-gray-100 px-10 py-6"></div>
-
             <div class="flex justify-center mt-2 px-10">
                 <div class="text-sm py-2 text-gray-600">
                     <div class="flex gap-2">
@@ -168,17 +147,24 @@
 </template>
 
 <script>
+import Micromodal from "Micromodal";
 export default {
     data() {
-        return{
-        isLoading: true,
-        }
-
+        return {
+            isLoading: true,
+            user: null
+        };
     },
     mounted() {
         setTimeout(() => {
             this.isLoading = false;
         }, 1000);
+        axios
+            .get("/api/user")
+            .then(res => {
+                (this.user = res.data), (this.isLoading = false);
+            })
+            .catch(error => {});
     }
 };
 </script>

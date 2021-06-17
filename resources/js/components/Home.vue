@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <Loading v-if="isLoading" class="fixed inset-0"></Loading>
+    <app-nav></app-nav>
         <header class="bg-white shadow dark:bg-gray-700">
             <div class=" mx-auto py-6 px-10 text-gray-900 dark:text-gray-200">
                 <h1 class="text-2xl font-bold ">
@@ -9,14 +9,18 @@
             </div>
         </header>
         <main>
-            <card-user></card-user>
+            <card-user>
+                
+            </card-user>
         </main>
     </div>
 </template>
 
 <script>
+import Nav from './Nav.vue';
 
 export default {
+  components: { Nav },
     data() {
         return {
             user: null,

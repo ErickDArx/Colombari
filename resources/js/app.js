@@ -1,7 +1,6 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
-
 import VueRouter from 'vue-router';
 import routes from './routes';
 import store from './index';
@@ -14,11 +13,12 @@ Vue.component('app-footer', require('./components/Footer.vue').default);
 Vue.component('app-principal', require('./components/Home.vue').default);
 Vue.component('card-user', require('./components/Personal.vue').default);
 Vue.component('Loading', require('./components/Loading.vue').default);
+Vue.component('options', require('./components/Options.vue').default);
 
 const app = new Vue({
     el: '#app',
     router: new VueRouter(routes),
-    store
+    store,
 });
 
 document.getElementById('switchTheme').addEventListener('click', function () {
