@@ -91,7 +91,7 @@ return [
             'prefix_indexes' => true,
         ],
 
-        // Ojo 
+        // Ojo aqui con el dsn
         'mongodb' => [
             'driver' => 'mongodb',
             'host'=> env('DB_DSN',''),
