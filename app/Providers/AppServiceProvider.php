@@ -14,6 +14,9 @@ class AppServiceProvider extends ServiceProvider
         if (env('REDIRECT_HTTPS')) {
             $this->app['request']->server->set('HTTPS', true);
         }
+        if ($this->app->environment() !== 'production') {
+            $this->app->register(IdeHelperServiceProvider::class);
+        }
     }
 
     public function boot(UrlGenerator $url)
