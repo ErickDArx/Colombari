@@ -91,6 +91,7 @@ return [
             'prefix_indexes' => true,
         ],
 
+        // Ojo 
         'mongodb' => [
             'driver' => 'mongodb',
             'host'=> env('DB_DSN',''),
