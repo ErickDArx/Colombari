@@ -69,4 +69,6 @@ export default {
         this.popupItem = this.$el;
     },
 };
+
+
 </script>

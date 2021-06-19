@@ -1,13 +1,6 @@
 <template>
     <div class="relative">
-    <app-nav></app-nav>
-        <header class="bg-white shadow dark:bg-gray-700">
-            <div class=" mx-auto py-6 px-10 text-gray-900 dark:text-gray-200">
-                <h1 class="text-2xl font-bold ">
-                    Panel de control
-                </h1>
-            </div>
-        </header>
+    
         <main>
             <card-user>
                 

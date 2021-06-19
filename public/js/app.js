@@ -2552,13 +2552,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -3539,6 +3532,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3868,14 +3873,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _components_Login__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Login */ "./resources/js/components/Login.vue");
 /* harmony import */ var _components_Register__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Register */ "./resources/js/components/Register.vue");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Footer */ "./resources/js/components/Footer.vue");
-/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Home */ "./resources/js/components/Home.vue");
-/* harmony import */ var _components_Perfil__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Perfil */ "./resources/js/components/Perfil.vue");
-/* harmony import */ var _components_Docentes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Docentes */ "./resources/js/components/Docentes.vue");
-/* harmony import */ var _components_ListaDocentes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/ListaDocentes */ "./resources/js/components/ListaDocentes.vue");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
-
+/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Home */ "./resources/js/components/Home.vue");
+/* harmony import */ var _components_Perfil__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Perfil */ "./resources/js/components/Perfil.vue");
+/* harmony import */ var _components_Docentes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Docentes */ "./resources/js/components/Docentes.vue");
+/* harmony import */ var _components_ListaDocentes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/ListaDocentes */ "./resources/js/components/ListaDocentes.vue");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -3893,9 +3896,9 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/Principal',
     name: 'Home',
-    component: _components_Home__WEBPACK_IMPORTED_MODULE_3__.default,
+    component: _components_Home__WEBPACK_IMPORTED_MODULE_2__.default,
     beforeEnter: function beforeEnter(to, form, next) {
-      axios__WEBPACK_IMPORTED_MODULE_7___default().get('/api/login').then(function () {
+      axios__WEBPACK_IMPORTED_MODULE_6___default().get('/api/login').then(function () {
         next();
       })["catch"](function () {
         return next({
@@ -3906,9 +3909,9 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: '/Perfil',
     name: 'Perfil',
-    component: _components_Perfil__WEBPACK_IMPORTED_MODULE_4__.default,
+    component: _components_Perfil__WEBPACK_IMPORTED_MODULE_3__.default,
     beforeEnter: function beforeEnter(to, form, next) {
-      axios__WEBPACK_IMPORTED_MODULE_7___default().get('/api/login').then(function () {
+      axios__WEBPACK_IMPORTED_MODULE_6___default().get('/api/login').then(function () {
         next();
       })["catch"](function () {
         return next({
@@ -3917,17 +3920,13 @@ __webpack_require__.r(__webpack_exports__);
       });
     }
   }, {
-    path: '/Footer',
-    name: 'footer',
-    component: _components_Footer__WEBPACK_IMPORTED_MODULE_2__.default
-  }, {
     path: '/Docentes',
     name: 'docentes',
-    component: _components_Docentes__WEBPACK_IMPORTED_MODULE_5__.default
+    component: _components_Docentes__WEBPACK_IMPORTED_MODULE_4__.default
   }, {
     path: '/ListaDocentes',
     name: 'ListaDocentes',
-    component: _components_ListaDocentes__WEBPACK_IMPORTED_MODULE_6__.default
+    component: _components_ListaDocentes__WEBPACK_IMPORTED_MODULE_5__.default
   }, {
     path: '/Registro',
     name: 'registro',
@@ -3954,7 +3953,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/**************************\\\r\n  Basic Modal Styles\r\n\\**************************/\n.modal {\n  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;\n}\n.modal__overlay {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: rgba(0,0,0,0.6);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.modal__container {\n  background-color: #fff;\n  padding: 30px;\n  max-width: 500px;\n  max-height: 100vh;\n  border-radius: 4px;\n  overflow-y: auto;\n  box-sizing: border-box;\n}\n.modal__header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.modal__title {\n  margin-top: 0;\n  margin-bottom: 0;\n  font-weight: 600;\n  font-size: 1.25rem;\n  line-height: 1.25;\n  color: #00449e;\n  box-sizing: border-box;\n}\n.modal__close {\n  background: transparent;\n  border: 0;\n}\n.modal__header .modal__close:before { content: \"\\2715\";\n}\n.modal__content {\n  margin-top: 2rem;\n  margin-bottom: 2rem;\n  line-height: 1.5;\n  color: rgba(0,0,0,.8);\n}\n.modal__btn {\n  font-size: .875rem;\n  padding-left: 1rem;\n  padding-right: 1rem;\n  padding-top: .5rem;\n  padding-bottom: .5rem;\n  background-color: #e6e6e6;\n  color: rgba(0,0,0,.8);\n  border-radius: .25rem;\n  border-style: none;\n  border-width: 0;\n  cursor: pointer;\n  -webkit-appearance: button;\n  text-transform: none;\n  overflow: visible;\n  line-height: 1.15;\n  margin: 0;\n  will-change: transform;\n  -moz-osx-font-smoothing: grayscale;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  transform: translateZ(0);\n  transition: transform .25s ease-out;\n}\n.modal__btn:focus, .modal__btn:hover {\n  transform: scale(1.05);\n}\n.modal__btn-primary {\n  background-color: #00449e;\n  color: #fff;\n}\n\n/**************************\\\r\n  Demo Animation Style\r\n\\**************************/\n@-webkit-keyframes mmfadeIn {\nfrom { opacity: 0;\n}\nto { opacity: 1;\n}\n}\n@keyframes mmfadeIn {\nfrom { opacity: 0;\n}\nto { opacity: 1;\n}\n}\n@-webkit-keyframes mmfadeOut {\nfrom { opacity: 1;\n}\nto { opacity: 0;\n}\n}\n@keyframes mmfadeOut {\nfrom { opacity: 1;\n}\nto { opacity: 0;\n}\n}\n@-webkit-keyframes mmslideIn {\nfrom { transform: translateY(15%);\n}\nto { transform: translateY(0);\n}\n}\n@keyframes mmslideIn {\nfrom { transform: translateY(15%);\n}\nto { transform: translateY(0);\n}\n}\n@-webkit-keyframes mmslideOut {\nfrom { transform: translateY(0);\n}\nto { transform: translateY(-10%);\n}\n}\n@keyframes mmslideOut {\nfrom { transform: translateY(0);\n}\nto { transform: translateY(-10%);\n}\n}\n.micromodal-slide {\n  display: none;\n}\n.micromodal-slide.is-open {\n  display: block;\n}\n.micromodal-slide[aria-hidden=\"false\"] .modal__overlay {\n  -webkit-animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);\n          animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);\n}\n.micromodal-slide[aria-hidden=\"false\"] .modal__container {\n  -webkit-animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);\n          animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);\n}\n.micromodal-slide[aria-hidden=\"true\"] .modal__overlay {\n  -webkit-animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);\n          animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);\n}\n.micromodal-slide[aria-hidden=\"true\"] .modal__container {\n  -webkit-animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);\n          animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);\n}\n.micromodal-slide .modal__container,\r\n.micromodal-slide .modal__overlay {\n  will-change: transform;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/**************************\\\r\n  Basic Modal Styles\r\n\\**************************/\n.modal {\r\n  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;\n}\n.modal__overlay {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background: rgba(0,0,0,0.6);\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.modal__container {\r\n  background-color: #fff;\r\n  padding: 30px;\r\n  max-width: 500px;\r\n  max-height: 100vh;\r\n  border-radius: 4px;\r\n  overflow-y: auto;\r\n  box-sizing: border-box;\n}\n.modal__header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\n}\n.modal__title {\r\n  margin-top: 0;\r\n  margin-bottom: 0;\r\n  font-weight: 600;\r\n  font-size: 1.25rem;\r\n  line-height: 1.25;\r\n  color: #00449e;\r\n  box-sizing: border-box;\n}\n.modal__close {\r\n  background: transparent;\r\n  border: 0;\n}\n.modal__header .modal__close:before { content: \"\\2715\";\n}\n.modal__content {\r\n  margin-top: 2rem;\r\n  margin-bottom: 2rem;\r\n  line-height: 1.5;\r\n  color: rgba(0,0,0,.8);\n}\n.modal__btn {\r\n  font-size: .875rem;\r\n  padding-left: 1rem;\r\n  padding-right: 1rem;\r\n  padding-top: .5rem;\r\n  padding-bottom: .5rem;\r\n  background-color: #e6e6e6;\r\n  color: rgba(0,0,0,.8);\r\n  border-radius: .25rem;\r\n  border-style: none;\r\n  border-width: 0;\r\n  cursor: pointer;\r\n  -webkit-appearance: button;\r\n  text-transform: none;\r\n  overflow: visible;\r\n  line-height: 1.15;\r\n  margin: 0;\r\n  will-change: transform;\r\n  -moz-osx-font-smoothing: grayscale;\r\n  -webkit-backface-visibility: hidden;\r\n  backface-visibility: hidden;\r\n  transform: translateZ(0);\r\n  transition: transform .25s ease-out;\n}\n.modal__btn:focus, .modal__btn:hover {\r\n  transform: scale(1.05);\n}\n.modal__btn-primary {\r\n  background-color: #00449e;\r\n  color: #fff;\n}\r\n\r\n\r\n\r\n/**************************\\\r\n  Demo Animation Style\r\n\\**************************/\n@-webkit-keyframes mmfadeIn {\nfrom { opacity: 0;\n}\nto { opacity: 1;\n}\n}\n@keyframes mmfadeIn {\nfrom { opacity: 0;\n}\nto { opacity: 1;\n}\n}\n@-webkit-keyframes mmfadeOut {\nfrom { opacity: 1;\n}\nto { opacity: 0;\n}\n}\n@keyframes mmfadeOut {\nfrom { opacity: 1;\n}\nto { opacity: 0;\n}\n}\n@-webkit-keyframes mmslideIn {\nfrom { transform: translateY(15%);\n}\nto { transform: translateY(0);\n}\n}\n@keyframes mmslideIn {\nfrom { transform: translateY(15%);\n}\nto { transform: translateY(0);\n}\n}\n@-webkit-keyframes mmslideOut {\nfrom { transform: translateY(0);\n}\nto { transform: translateY(-10%);\n}\n}\n@keyframes mmslideOut {\nfrom { transform: translateY(0);\n}\nto { transform: translateY(-10%);\n}\n}\n.micromodal-slide {\r\n  display: none;\n}\n.micromodal-slide.is-open {\r\n  display: block;\n}\n.micromodal-slide[aria-hidden=\"false\"] .modal__overlay {\r\n  -webkit-animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);\r\n          animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);\n}\n.micromodal-slide[aria-hidden=\"false\"] .modal__container {\r\n  -webkit-animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);\r\n          animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);\n}\n.micromodal-slide[aria-hidden=\"true\"] .modal__overlay {\r\n  -webkit-animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);\r\n          animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);\n}\n.micromodal-slide[aria-hidden=\"true\"] .modal__container {\r\n  -webkit-animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);\r\n          animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);\n}\n.micromodal-slide .modal__container,\r\n.micromodal-slide .modal__overlay {\r\n  will-change: transform;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -3978,7 +3977,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".lds-ring {\n  display: inline-block;\n  position: absolute;\n  width: 80px;\n  height: 80px;\n}\n.lds-ring div {\n  box-sizing: border-box;\n  display: block;\n  position: absolute;\n  width: 64px;\n  height: 64px;\n  margin: 8px;\n  border: 8px solid #fff;\n  border-radius: 50%;\n  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\n  border-color: #fff transparent transparent transparent;\n}\n.lds-ring div:nth-child(1) {\n  -webkit-animation-delay: -0.45s;\n          animation-delay: -0.45s;\n}\n.lds-ring div:nth-child(2) {\n  -webkit-animation-delay: -0.3s;\n          animation-delay: -0.3s;\n}\n.lds-ring div:nth-child(3) {\n  -webkit-animation-delay: -0.15s;\n          animation-delay: -0.15s;\n}\n@-webkit-keyframes lds-ring {\n0% {\n    transform: rotate(0deg);\n}\n100% {\n    transform: rotate(360deg);\n}\n}\n@keyframes lds-ring {\n0% {\n    transform: rotate(0deg);\n}\n100% {\n    transform: rotate(360deg);\n}\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.lds-ring {\r\n    display: inline-block;\r\n    position: absolute;\r\n    width: 80px;\r\n    height: 80px;\n}\n.lds-ring div {\r\n    box-sizing: border-box;\r\n    display: block;\r\n    position: absolute;\r\n    width: 64px;\r\n    height: 64px;\r\n    margin: 8px;\r\n    border: 8px solid #fff;\r\n    border-radius: 50%;\r\n    -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\r\n            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;\r\n    border-color: #fff transparent transparent transparent;\n}\n.lds-ring div:nth-child(1) {\r\n    -webkit-animation-delay: -0.45s;\r\n            animation-delay: -0.45s;\n}\n.lds-ring div:nth-child(2) {\r\n    -webkit-animation-delay: -0.3s;\r\n            animation-delay: -0.3s;\n}\n.lds-ring div:nth-child(3) {\r\n    -webkit-animation-delay: -0.15s;\r\n            animation-delay: -0.15s;\n}\n@-webkit-keyframes lds-ring {\n0% {\r\n        transform: rotate(0deg);\n}\n100% {\r\n        transform: rotate(360deg);\n}\n}\n@keyframes lds-ring {\n0% {\r\n        transform: rotate(0deg);\n}\n100% {\r\n        transform: rotate(360deg);\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -45010,37 +45009,11 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "relative" },
-    [
-      _c("app-nav"),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c("main", [_c("card-user")], 1)
-    ],
-    1
-  )
+  return _c("div", { staticClass: "relative" }, [
+    _c("main", [_c("card-user")], 1)
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("header", { staticClass: "bg-white shadow dark:bg-gray-700" }, [
-      _c(
-        "div",
-        { staticClass: " mx-auto py-6 px-10 text-gray-900 dark:text-gray-200" },
-        [
-          _c("h1", { staticClass: "text-2xl font-bold " }, [
-            _vm._v("\n                Panel de control\n            ")
-          ])
-        ]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -46703,74 +46676,127 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass: "container mx-auto mt-4 mb-4 px-8 grid grid-1 md:grid-cols-2"
-    },
-    [
-      _c(
-        "div",
-        {
-          staticClass:
-            "bg-blue-500 flex rounded-md items-center m-2 p-2 shadow-lg"
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass:
-                "relative container mx-auto px-2 py-2 text-base text-gray-200 gap-1 grid grid-cols-1"
-            },
-            [
-              _c("div", { staticClass: "items-center flex gap-2" }, [
-                _c(
-                  "svg",
-                  {
-                    staticClass: "h-12 w-12",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      fill: "none",
-                      viewBox: "0 0 24 24",
-                      stroke: "currentColor"
-                    }
-                  },
-                  [
-                    _c("path", {
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass:
+          "container mx-auto mt-4 mb-4 px-8 grid grid-1 md:grid-cols-2"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-blue-500 flex rounded-md items-center m-2 p-2 shadow-lg"
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "relative container mx-auto px-2 py-2 text-base text-gray-200 gap-1 grid grid-cols-1"
+              },
+              [
+                _c("div", { staticClass: "items-center flex gap-2" }, [
+                  _c(
+                    "svg",
+                    {
+                      staticClass: "h-12 w-12",
                       attrs: {
-                        "stroke-linecap": "round",
-                        "stroke-linejoin": "round",
-                        "stroke-width": "2",
-                        d:
-                          "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        stroke: "currentColor"
                       }
-                    })
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", [
-                  _c("p", { staticClass: "font-semibold" }, [
-                    _vm._v(_vm._s(_vm.user.name))
-                  ]),
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                          d:
+                            "M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        }
+                      })
+                    ]
+                  ),
                   _vm._v(" "),
-                  _c("p", { staticClass: "font-light text-sm" }, [
-                    _vm._v("Educador(a)")
+                  _c("div", [
+                    _c("p", { staticClass: "font-semibold" }, [
+                      _vm._v(_vm._s(_vm.user.name))
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "font-light text-sm" }, [
+                      _vm._v("Educador(a)")
+                    ])
                   ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "absolute right-0" }, [
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "absolute right-0" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "focus:outline-none hover:bg-blue-400 rounded-full px-1 py-1"
+                    },
+                    [
+                      _c(
+                        "svg",
+                        {
+                          staticClass: "h-8 w-8",
+                          attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            fill: "none",
+                            viewBox: "0 0 24 24",
+                            stroke: "currentColor"
+                          }
+                        },
+                        [
+                          _c("path", {
+                            attrs: {
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              d: "M4 6h16M4 12h16m-7 6h7"
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "z-10" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass:
+                        "text-sm bg-blue-900 px-10 relative py-2 rounded-md mt-2 focus:outline-none hover:bg-blue-800",
+                      on: { click: _vm.Perfil }
+                    },
+                    [
+                      _vm._v(
+                        "\r\n                        Ver mi perfil\r\n                    "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
                 _c(
-                  "button",
+                  "div",
                   {
                     staticClass:
-                      "focus:outline-none hover:bg-blue-400 rounded-full px-1 py-1"
+                      "absolute right-0 bottom-0 bg-no-repeat bg-right-bottom opacity-30"
                   },
                   [
                     _c(
                       "svg",
                       {
-                        staticClass: "h-8 w-8",
+                        staticClass: "h-12 w-12",
                         attrs: {
                           xmlns: "http://www.w3.org/2000/svg",
                           fill: "none",
@@ -46784,255 +46810,229 @@ var render = function() {
                             "stroke-linecap": "round",
                             "stroke-linejoin": "round",
                             "stroke-width": "2",
-                            d: "M4 6h16M4 12h16m-7 6h7"
+                            d:
+                              "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                           }
                         })
                       ]
                     )
                   ]
                 )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "z-10" }, [
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-green-600 flex rounded-md items-center m-2 p-2 shadow-lg"
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "relative container mx-auto px-2 py-2 text-base text-gray-200 gap-1 grid grid-cols-1"
+              },
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._m(2),
+                _vm._v(" "),
                 _c(
-                  "button",
+                  "div",
                   {
                     staticClass:
-                      "text-sm bg-blue-900 px-10 relative py-2 rounded-md mt-2 focus:outline-none hover:bg-blue-800",
-                    on: { click: _vm.Perfil }
+                      "absolute right-0 bottom-0 bg-no-repeat bg-right-bottom opacity-30"
                   },
                   [
-                    _vm._v(
-                      "\n                    Ver mi perfil\n                "
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "h-12 w-12",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          fill: "none",
+                          viewBox: "0 0 24 24",
+                          stroke: "currentColor"
+                        }
+                      },
+                      [
+                        _c("path", { attrs: { d: "M12 14l9-5-9-5-9 5 9 5z" } }),
+                        _vm._v(" "),
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("path", {
+                          attrs: {
+                            "stroke-linecap": "round",
+                            "stroke-linejoin": "round",
+                            "stroke-width": "2",
+                            d:
+                              "M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                          }
+                        })
+                      ]
                     )
                   ]
                 )
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "absolute right-0 bottom-0 bg-no-repeat bg-right-bottom opacity-30"
-                },
-                [
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-purple-600 flex rounded-md items-center m-2 p-2 shadow-lg"
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "relative container mx-auto px-2 py-2 text-base text-gray-200 gap-1 grid grid-cols-1"
+              },
+              [
+                _vm._m(3),
+                _vm._v(" "),
+                _c("div", { staticClass: "z-10" }, [
                   _c(
-                    "svg",
+                    "button",
                     {
-                      staticClass: "h-12 w-12",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        fill: "none",
-                        viewBox: "0 0 24 24",
-                        stroke: "currentColor"
-                      }
+                      staticClass:
+                        "bg-purple-900 px-10 relative py-2 rounded-md mt-2 focus:outline-none hover:bg-purple-800",
+                      on: { click: _vm.Docentes }
                     },
                     [
-                      _c("path", {
-                        attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d:
-                            "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                        }
-                      })
+                      _vm._v(
+                        "\r\n                        Ingresar\r\n                    "
+                      )
                     ]
                   )
-                ]
-              )
-            ]
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "bg-green-600 flex rounded-md items-center m-2 p-2 shadow-lg"
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass:
-                "relative container mx-auto px-2 py-2 text-base text-gray-200 gap-1 grid grid-cols-1"
-            },
-            [
-              _vm._m(0),
-              _vm._v(" "),
-              _vm._m(1),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "absolute right-0 bottom-0 bg-no-repeat bg-right-bottom opacity-30"
-                },
-                [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "h-12 w-12",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        fill: "none",
-                        viewBox: "0 0 24 24",
-                        stroke: "currentColor"
-                      }
-                    },
-                    [
-                      _c("path", { attrs: { d: "M12 14l9-5-9-5-9 5 9 5z" } }),
-                      _vm._v(" "),
-                      _c("path", {
-                        attrs: {
-                          d:
-                            "M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("path", {
-                        attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d:
-                            "M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                        }
-                      })
-                    ]
-                  )
-                ]
-              )
-            ]
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "bg-purple-600 flex rounded-md items-center m-2 p-2 shadow-lg"
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass:
-                "relative container mx-auto px-2 py-2 text-base text-gray-200 gap-1 grid grid-cols-1"
-            },
-            [
-              _vm._m(2),
-              _vm._v(" "),
-              _c("div", { staticClass: "z-10" }, [
+                ]),
+                _vm._v(" "),
                 _c(
-                  "button",
+                  "div",
                   {
                     staticClass:
-                      "bg-purple-900 px-10 relative py-2 rounded-md mt-2 focus:outline-none hover:bg-purple-800",
-                    on: { click: _vm.Docentes }
+                      "absolute right-0 bottom-0 bg-no-repeat bg-right-bottom opacity-30"
                   },
-                  [_vm._v("\n                    Ingresar\n                ")]
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "h-12 w-12",
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          fill: "none",
+                          viewBox: "0 0 24 24",
+                          stroke: "currentColor"
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            "stroke-linecap": "round",
+                            "stroke-linejoin": "round",
+                            "stroke-width": "2",
+                            d:
+                              "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                          }
+                        })
+                      ]
+                    )
+                  ]
                 )
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "absolute right-0 bottom-0 bg-no-repeat bg-right-bottom opacity-30"
-                },
-                [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "h-12 w-12",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        fill: "none",
-                        viewBox: "0 0 24 24",
-                        stroke: "currentColor"
-                      }
-                    },
-                    [
-                      _c("path", {
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "bg-indigo-600 flex rounded-md items-center m-2 p-2 shadow-lg"
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "relative container mx-auto px-2 py-2 text-base text-gray-200 gap-1 grid grid-cols-1"
+              },
+              [
+                _vm._m(4),
+                _vm._v(" "),
+                _vm._m(5),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "absolute right-0 bottom-0 bg-no-repeat bg-right-bottom opacity-30"
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "h-12 w-12",
                         attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d:
-                            "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                          xmlns: "http://www.w3.org/2000/svg",
+                          fill: "none",
+                          viewBox: "0 0 24 24",
+                          stroke: "currentColor"
                         }
-                      })
-                    ]
-                  )
-                ]
-              )
-            ]
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "bg-indigo-600 flex rounded-md items-center m-2 p-2 shadow-lg"
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass:
-                "relative container mx-auto px-2 py-2 text-base text-gray-200 gap-1 grid grid-cols-1"
-            },
-            [
-              _vm._m(3),
-              _vm._v(" "),
-              _vm._m(4),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "absolute right-0 bottom-0 bg-no-repeat bg-right-bottom opacity-30"
-                },
-                [
-                  _c(
-                    "svg",
-                    {
-                      staticClass: "h-12 w-12",
-                      attrs: {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        fill: "none",
-                        viewBox: "0 0 24 24",
-                        stroke: "currentColor"
-                      }
-                    },
-                    [
-                      _c("path", {
-                        attrs: {
-                          "stroke-linecap": "round",
-                          "stroke-linejoin": "round",
-                          "stroke-width": "2",
-                          d:
-                            "M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
-                        }
-                      })
-                    ]
-                  )
-                ]
-              )
-            ]
-          )
-        ]
-      )
-    ]
-  )
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            "stroke-linecap": "round",
+                            "stroke-linejoin": "round",
+                            "stroke-width": "2",
+                            d:
+                              "M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+                          }
+                        })
+                      ]
+                    )
+                  ]
+                )
+              ]
+            )
+          ]
+        )
+      ]
+    )
+  ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("header", { staticClass: "bg-white shadow dark:bg-gray-700" }, [
+      _c(
+        "div",
+        { staticClass: " mx-auto py-6 px-10 text-gray-900 dark:text-gray-200" },
+        [
+          _c("h1", { staticClass: "text-2xl font-bold " }, [
+            _vm._v(
+              "\r\n                    Panel de control\r\n                "
+            )
+          ])
+        ]
+      )
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -47060,7 +47060,7 @@ var staticRenderFns = [
           staticClass:
             "bg-green-900 px-10 relative py-2 rounded-md mt-2 focus:outline-none hover:bg-green-800"
         },
-        [_vm._v("\n                    Revisar\n                ")]
+        [_vm._v("\r\n                        Revisar\r\n                    ")]
       )
     ])
   },
@@ -47088,7 +47088,7 @@ var staticRenderFns = [
       _c("div", [
         _c("h3", { staticClass: "text-base font-medium" }, [
           _vm._v(
-            "\n                        Área de estadistica de estudiantes\n                    "
+            "\r\n                            Área de estadistica de estudiantes\r\n                        "
           )
         ]),
         _vm._v(" "),
@@ -47109,7 +47109,11 @@ var staticRenderFns = [
           staticClass:
             "bg-indigo-900 px-10 relative py-2 rounded-md mt-2 focus:outline-none hover:bg-indigo-800"
         },
-        [_vm._v("\n                    Ver información\n                ")]
+        [
+          _vm._v(
+            "\r\n                        Ver información\r\n                    "
+          )
+        ]
       )
     ])
   }

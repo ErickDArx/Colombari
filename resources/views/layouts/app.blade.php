@@ -12,6 +12,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+
 </head>
 
 <body class="dark:bg-gray-800">
@@ -19,7 +21,6 @@
     <div id="app" class="flex flex-col h-screen justify-between">
         <div class="">
             <router-view>
-
             </router-view>
         </div>
         <app-footer></app-footer>

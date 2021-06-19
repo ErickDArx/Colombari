@@ -1,6 +1,5 @@
 import Login from './components/Login';
 import Registro from './components/Register';
-import Footer from './components/Footer';
 import Home from './components/Home';
 import Perfil from './components/Perfil';
 import Docentes from './components/Docentes';
@@ -39,11 +38,6 @@ export default ({
                     return next({name:'Login'})
                 });
             }
-        },
-        {
-            path: '/Footer',
-            name: 'footer',
-            component: Footer
         },
         {
             path: '/Docentes',

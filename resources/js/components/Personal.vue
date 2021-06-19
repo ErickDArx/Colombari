@@ -1,5 +1,15 @@
 <template>
+
+<div>
+        <header class="bg-white shadow dark:bg-gray-700">
+            <div class=" mx-auto py-6 px-10 text-gray-900 dark:text-gray-200">
+                <h1 class="text-2xl font-bold ">
+                    Panel de control
+                </h1>
+            </div>
+        </header>
     <div class="container mx-auto mt-4 mb-4 px-8 grid grid-1 md:grid-cols-2">
+        
         <div class="bg-blue-500 flex rounded-md items-center m-2 p-2 shadow-lg">
             <div
                 class="relative container mx-auto px-2 py-2 text-base text-gray-200 gap-1 grid grid-cols-1"
@@ -205,6 +215,8 @@
             </div>
         </div>
     </div>
+</div>
+
 </template>
 
 <script>
